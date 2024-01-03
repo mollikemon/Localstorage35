@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="name">
+    <button id="show"onclick="show()">click</button><br><br>
+    <!-- <button>data show</button> -->
+       <h3 id="rajala"></h3>
+
+    <script>
+document.getElementById('show').addEventListener('click',function(){
+    const too=document.getElementById('name').value
+    localStorage.name=too;
+})
+function show(){
+    document.getElementById('rajala').innerHTML=localStorage.name
+}
+
+    </script>
+</body> 
+</html>
