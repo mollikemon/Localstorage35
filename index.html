@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .color{
+            background-color: rgb(255, 255, 0);
+            color: rgb(0, 26, 255);
+            height: 100%;
+             width: 200px;
+             border: 2px solid red;
+             border-radius: 12px;
+        }
+        li{
+  list-style-type: none;
+}
+    </style>
+
 </head>
 <body>
     
     <input type="text" name="" id="name">
-    <button id="show"onclick="show()">click</button><br><br>
+    <button id="show">click</button><br><br>
     <!-- <button>data show</button> -->
+    <div class="color">
        <h3 id="rajala"></h3>
-
+    </div>
     <script>
 document.getElementById('show').addEventListener('click',function(){
     const too=document.getElementById('name').value
     localStorage.name=too;
+     document.getElementById('rajala').innerHTML+='<li>'+localStorage.name+'</li>'
 })
-function show(){
-    document.getElementById('rajala').innerHTML=localStorage.name
-}
+   
+
+
 
     </script>
 </body> 
